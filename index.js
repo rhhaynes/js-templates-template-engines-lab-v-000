@@ -4,7 +4,7 @@ function createPost(){
   const postText     = document.getElementById("postText").value;
   const postTemplate = document.getElementById("page-template").innerHTML;
 
-  var templateFn = _.template(commentTemplate);
+  const templateFn = _.template(postTemplate);
 
   var commentsDiv = document.getElementById("comments");
 
