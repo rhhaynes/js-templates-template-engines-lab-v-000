@@ -3,12 +3,16 @@ function createPost(){
   const postAuthor   = document.getElementById("postAuthor").value;
   const postText     = document.getElementById("postText").value;
   const postTemplate = document.getElementById("post-template").innerHTML;
+  const pageTemplate = document.getElementById("page-template").innerHTML;
 
-  const templateFn   = _.template(postTemplate);
-  const templateHTML = templateFn({'postTitle': postTitle, 'postAuthor': postAuthor, 'postText': postText});
+  const postTemplateFn   = _.template(postTemplate);
+  const postTemplateHTML = postTemplateFn({'postTitle': postTitle, 'postAuthor': postAuthor, 'postText': postText});
+
+  const pageTemplateFn   = _.template(pageTemplate);
+  const pageTemplateHTML = pageTemplateFn({'post': postTemplateHTML});
 
   let postDiv = document.getElementById("post");
-  postDiv.innerHTML = templateHTML;
+  postDiv.innerHTML = pageTemplateHTML;
 }
 
 function postComment(){}
