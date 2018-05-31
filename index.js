@@ -23,14 +23,12 @@ function createPost(){
 function postComment(){
   const commentAuthor    = document.getElementById("commentAuthor").value;
   const commentText      = document.getElementById("commentText").value;
-  
-  const oldComments      = document.getElementById("blog-comment").innerHTML;
 
   const commentTemplate  = document.getElementById("comment-template").innerHTML;
-  // const commentsTemplate = document.getElementById("comments-template").innerHTML;
+  const commentsTemplate = document.getElementById("comments-template").innerHTML;
 
   const commentTemplateFn    = _.template(commentTemplate);
-  const commentTemplateHTML  = oldComments + commentTemplateFn({'commentAuthor': commentAuthor, 'commentText': commentText});
+  const commentTemplateHTML  = commentTemplateFn({'commentAuthor': commentAuthor, 'commentText': commentText});
 
   const commentsTemplateFn   = _.template(commentsTemplate);
   const commentsTemplateHTML = commentsTemplateFn({'comment': commentTemplateHTML});
