@@ -1,6 +1,8 @@
 function createPost(){
-  document.getElementById("commenterName").value;
-  document.getElementById("commentText").value;
+  const title  = document.getElementById("postTitle").value;
+  const author = document.getElementById("postAuthor").value;
+  const body   = document.getElementById("postText").value;
+  const postTemp
   document.getElementById("comment-template").innerHTML;
 
   var templateFn = _.template(commentTemplate);
