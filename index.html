@@ -14,7 +14,11 @@
       </form>
       <div id="blog-post"></div>
       <div id="blog-comment">
-        
+        <form id="comment-form" onsubmit="postComment();return false;">
+          Name: <input type="text" id="commentAuthor"/><br/>
+          Comment: <input type="textarea" id="commentText"/><br/>
+        <input type="submit"/>
+      </form>
       </div>
     </main>
     
