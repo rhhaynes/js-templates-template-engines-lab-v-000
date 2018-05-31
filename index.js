@@ -4,7 +4,6 @@ function createPost(){
   const postText     = document.getElementById("postText").value;
   
   const postTemplate    = document.getElementById("post-template").innerHTML;
-  const sidebarTemplate = document.getElementById("sidebar-template").innerHTML;
   const pageTemplate    = document.getElementById("page-template").innerHTML;
 
   const postTemplateFn       = _.template(postTemplate);
