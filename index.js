@@ -6,7 +6,7 @@ function createPost(){
 
   const templateFn = _.template(postTemplate);
 
-  var commentsDiv = document.getElementById("comments");
+  let postDiv = document.getElementById("comments");
 
   var templateHTML = templateFn({ 'comment': comment, 'commenter': commenter });
   commentsDiv.innerHTML += templateHTML;
