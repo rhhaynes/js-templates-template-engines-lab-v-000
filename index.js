@@ -7,14 +7,14 @@ function createPost(){
   const commentsTemplate = document.getElementById("comments-template").innerHTML;
   const pageTemplate     = document.getElementById("page-template").innerHTML;
 
-  const postTemplateFn       = _.template(postTemplate);
-  const postTemplateHTML     = postTemplateFn({'postTitle': postTitle, 'postAuthor': postAuthor, 'postText': postText});
+  const postTemplateFn   = _.template(postTemplate);
+  const postTemplateHTML = postTemplateFn({'postTitle': postTitle, 'postAuthor': postAuthor, 'postText': postText});
 
   const commentsTemplateFn   = _.template(commentsTemplate);
   const commentsTemplateHTML = commentsTemplateFn({'comment': ''});
 
-  const pageTemplateFn       = _.template(pageTemplate);
-  const pageTemplateHTML     = pageTemplateFn({'post': postTemplateHTML, 'sidebar': ''});
+  const pageTemplateFn   = _.template(pageTemplate);
+  const pageTemplateHTML = pageTemplateFn({'post': postTemplateHTML, 'sidebar': ''});
 
   document.getElementById("blog-post").innerHTML = pageTemplateHTML;
   document.getElementById("blog-comment").innerHTML = commentsTemplateHTML;
