@@ -13,9 +13,10 @@ function createPost(){
   const commentsTemplateHTML = commentsTemplateFn({'comment': ''});
 
   const pageTemplateFn       = _.template(pageTemplate);
-  const pageTemplateHTML     = pageTemplateFn({'post': postTemplateHTML, 'sidebar': commentsTemplateHTML});
+  const pageTemplateHTML     = pageTemplateFn({'post': postTemplateHTML, 'sidebar': ''});
 
   document.getElementById("blog-post").innerHTML = pageTemplateHTML;
+  document.getElementById("blog-comment").innerHTML = commentsTemplateHTML;
 }
 
 function postComment(){
