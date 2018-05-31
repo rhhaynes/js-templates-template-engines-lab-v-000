@@ -6,7 +6,7 @@ function createPost(){
   const postTemplate = document.getElementById("page-template").innerHTML;
 
   const templateFn   = _.template(postTemplate);
-  const templateHTML = templateFn({ 'postTitle': postTitle, 'postAuthor': postAuthor, 'postText': postText});
+  const templateHTML = templateFn({'postTitle': postTitle, 'postAuthor': postAuthor, 'postText': postText});
 
   let postDiv = document.getElementById("post");
   postDiv.innerHTML += templateHTML;
