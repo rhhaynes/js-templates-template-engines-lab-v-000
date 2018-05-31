@@ -15,23 +15,23 @@
     </main>
     
     <script id="page-template" type="text/x-lodash-template">
-      <div id="page">
+      <div class="page-container">
         <div id="sidebar">
           <%= sidebar %>
         </div>
-        <div id="blog">
-          <%= post %>
+        <div id="blog-post">
+          <%= blogPost %>
         </div>
       </div>
     </script>
     
     <script id="post-template" type="text/x-lodash-template">
-      <article class="blog-post">
-        <div class="blog-header">
-          <%= header %>
+      <article class="post-container">
+        <div id="blog-header">
+          <%= blogHeader %>
         </div>
-        <div class="blog-footer">
-          <%= footer %>
+        <div id="blog-footer">
+          <%= blogFooter %>
         </div>
       </article>
     </script>
