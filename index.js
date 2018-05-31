@@ -11,8 +11,7 @@ function createPost(){
   const pageTemplateFn   = _.template(pageTemplate);
   const pageTemplateHTML = pageTemplateFn({'post': postTemplateHTML, 'sidebar': ''});
 
-  let postDiv = document.getElementById("post");
-  postDiv.innerHTML = pageTemplateHTML;
+  document.getElementById("blog-post").innerHTML = pageTemplateHTML;
 }
 
 function postComment(){}
