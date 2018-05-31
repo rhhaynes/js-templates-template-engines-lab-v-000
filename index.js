@@ -1,15 +1,12 @@
 function createPost(){
-  
-  commenter = document.getElementById("commenterName").value;
-  comment = document.getElementById("commentText").value;
-  commentTemplate = document.getElementById("comment-template").innerHTML;
- 
-  //create template function
+  document.getElementById("commenterName").value;
+  document.getElementById("commentText").value;
+  document.getElementById("comment-template").innerHTML;
+
   var templateFn = _.template(commentTemplate);
- 
+
   var commentsDiv = document.getElementById("comments");
- 
-  //execute template function with JSON object for the interpolated values
+
   var templateHTML = templateFn({ 'comment': comment, 'commenter': commenter });
   commentsDiv.innerHTML += templateHTML;
 }
