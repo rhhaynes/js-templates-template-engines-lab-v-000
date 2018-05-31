@@ -11,8 +11,6 @@ function createPost(){
  
   //execute template function with JSON object for the interpolated values
   var templateHTML = templateFn({ 'comment': comment, 'commenter': commenter });
- 
-  //append rather than replace!
   commentsDiv.innerHTML += templateHTML;
 }
 
