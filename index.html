@@ -4,6 +4,7 @@
     <title>JavaScript lodash Templates Lab</title>
   </head>
   <body>
+    
     <main>
       <form id="post-form" onsubmit="createPost();return false;">
         Title: <input type="text" id="postTitle"/><br/>
@@ -33,6 +34,16 @@
           <%= footer %>
         </div>
       </article>
+    </script>
+    
+    <script id="comments-template" type="text/x-lodash-template">
+      <div class="comments-container">
+        <div class="comments">
+          <%= comments %>
+        </div>
+        <form>
+        </form>
+      </div>
     </script>
     
     <script src="node_modules/lodash/lodash.min.js"></script>
