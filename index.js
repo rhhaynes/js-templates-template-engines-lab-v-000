@@ -21,9 +21,9 @@ function createPost(){
 }
 
 function postComment(){
-  const commentAuthor    = document.getElementById("commentAuthor").value;
-  const commentText      = document.getElementById("commentText").value;
-  const prevComments     = document.getElementById("comments").innerHTML;
+  const commentAuthor = document.getElementById("commentAuthor").value;
+  const commentText   = document.getElementById("commentText").value;
+  const prevComments  = document.getElementById("comments").innerHTML;
 
   const commentTemplate  = document.getElementById("comment-template").innerHTML;
   const commentsTemplate = document.getElementById("comments-template").innerHTML;
