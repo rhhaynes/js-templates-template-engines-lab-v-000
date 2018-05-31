@@ -15,16 +15,16 @@ function createPost(){
 }
 
 function postComment(){
-  const commentAuthor   = document.getElementById("commentAuthor").value;
-  const commentText     = document.getElementById("commentText").value;
-  const commentTemplate = document.getElementById("post-template").innerHTML;
-  const pageTemplate = document.getElementById("page-template").innerHTML;
+  const commentAuthor    = document.getElementById("commentAuthor").value;
+  const commentText      = document.getElementById("commentText").value;
+  const commentTemplate  = document.getElementById("comment-template").innerHTML;
+  const commentsTemplate = document.getElementById("comments-template").innerHTML;
 
-  const postTemplateFn   = _.template(postTemplate);
-  const postTemplateHTML = postTemplateFn({'postTitle': postTitle, 'postAuthor': postAuthor, 'postText': postText});
+  const commentTemplateFn    = _.template(commentTemplate);
+  const commentTemplateHTML  = commentTemplateFn({'commentAuthor': commentAuthor, 'commentText': commentText});
 
-  const pageTemplateFn   = _.template(pageTemplate);
-  const pageTemplateHTML = pageTemplateFn({'post': postTemplateHTML, 'sidebar': ''});
+  const commentsTemplateFn   = _.template(commentsTemplate);
+  const commentsTemplateHTML = commentsTemplateFn({'comment': commentTemplateHTML});
 
-  document.getElementById("blog-post").innerHTML = pageTemplateHTML;
+  document.getElementById("blog-comment").innerHTML += commentsTemplateHTML;
 }
