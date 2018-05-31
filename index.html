@@ -37,18 +37,21 @@
     </script>
     
     <script id="comments-template" type="text/x-lodash-template">
-      <div class="comments-container">
+      <div class="comments-wrapper">
         <div class="comments">
           <%= comments %>
         </div>
-        <form>
+        <form id="comment-form" onsubmit="postComment();return false;">
+          Name: <input type="text" id="commentAuthor"/><br/>
+          Comment: <input type="textarea" id="commentText"/><br/>
+          <input type="submit"/>
         </form>
       </div>
     </script>
     
     <script id="comment-template" type="text/x-lodash-template">
       <div class="comment-container">
-        <div class="comment">
+        <div class="comment-body">
           <p><%= comment %></p>
         </div>
         <div class="comment-footer">
