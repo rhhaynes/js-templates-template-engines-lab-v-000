@@ -33,5 +33,5 @@ function postComment(){
   const commentsTemplateFn   = _.template(commentsTemplate);
   const commentsTemplateHTML = commentsTemplateFn({'comment': commentTemplateHTML});
 
-  document.getElementById("blog-comment").innerHTML += commentsTemplateHTML;
+  document.getElementById("blog-comment").innerHTML = commentsTemplateHTML;
 }
