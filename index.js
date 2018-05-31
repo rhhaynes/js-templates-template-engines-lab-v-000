@@ -1,3 +1,5 @@
-function createPost(){}
+function createPost(){
+  bla
+}
 
 function postComment(){}
