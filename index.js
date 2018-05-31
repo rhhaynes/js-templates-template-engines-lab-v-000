@@ -20,6 +20,10 @@ function createPost(){
   document.getElementById("blog-comment").innerHTML = commentsTemplateHTML;
 }
 
+function commentForm(){
+  
+}
+
 function postComment(){
   const commentAuthor    = document.getElementById("commentAuthor").value;
   const commentText      = document.getElementById("commentText").value;
