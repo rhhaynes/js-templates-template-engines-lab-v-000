@@ -9,7 +9,7 @@ function createPost(){
   const postTemplateHTML = postTemplateFn({'postTitle': postTitle, 'postAuthor': postAuthor, 'postText': postText});
 
   const pageTemplateFn   = _.template(pageTemplate);
-  const pageTemplateHTML = pageTemplateFn({'post': postTemplateHTML});
+  const pageTemplateHTML = pageTemplateFn({'post': postTemplateHTML, 'sidebar': ''});
 
   let postDiv = document.getElementById("post");
   postDiv.innerHTML = pageTemplateHTML;
