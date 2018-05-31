@@ -5,10 +5,11 @@
   </head>
   <body>
     <main>
-      <form onsubmit="postComment();return false;">
-        Name: <input type="text" id="commenterName"><br>
-        Comment: <input type="textarea" id="commentText"><br>
-        <input type="submit">
+      <form id="post-form" onsubmit="createPost();return false;">
+        Title: <input type="text" id="postTitle"/><br/>
+        Author: <input type="text" id="postAuthor"/><br/>
+        Post: <input type="textarea" id="postBody"/><br/>
+        <input type="submit"/>
       </form>
     </main>
     <script src="node_modules/lodash/lodash.min.js"></script>
